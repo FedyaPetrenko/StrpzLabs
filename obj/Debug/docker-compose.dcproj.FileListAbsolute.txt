@@ -1,9 +1,0 @@
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\KafkaListener.dll
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\WebApi.dll
-C:\Projects\Strpz Labs\StrpzLabs\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\WebApi.pdb
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\KafkaListener.pdb
-C:\Projects\Strpz Labs\StrpzLabs\obj\Debug\docker-compose.dcprojAssemblyReference.cache
-C:\Projects\Strpz Labs\StrpzLabs\obj\Debug\docker-compose.dcproj.CopyComplete
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\Domain.dll
-C:\Projects\Strpz Labs\StrpzLabs\bin\Debug\Domain.pdb
