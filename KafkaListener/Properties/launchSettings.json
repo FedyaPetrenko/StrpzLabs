@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "KafkaListener": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

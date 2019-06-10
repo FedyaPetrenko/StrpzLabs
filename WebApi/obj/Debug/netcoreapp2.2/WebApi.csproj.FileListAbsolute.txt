@@ -1,0 +1,17 @@
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.csprojAssemblyReference.cache
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.csproj.CoreCompileInputs.cache
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cache
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cs
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfoInputs.cache
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfo.cs
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorTargetAssemblyInfo.cache
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\WebApi.deps.json
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.json
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.dev.json
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\WebApi.dll
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\WebApi.pdb
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.csproj.CopyComplete
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.dll
+C:\Projects\Strpz Labs\StrpzLabs\WebApi\obj\Debug\netcoreapp2.2\WebApi.pdb

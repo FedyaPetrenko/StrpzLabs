@@ -1,0 +1,14 @@
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.csprojAssemblyReference.cache
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.csproj.CoreCompileInputs.cache
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.AssemblyInfoInputs.cache
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.AssemblyInfo.cs
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\KafkaListener.deps.json
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\KafkaListener.runtimeconfig.json
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\KafkaListener.runtimeconfig.dev.json
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\KafkaListener.dll
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\KafkaListener.pdb
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.csproj.CopyComplete
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.dll
+C:\Projects\Strpz Labs\StrpzLabs\KafkaListener\obj\Debug\netcoreapp2.2\KafkaListener.pdb
