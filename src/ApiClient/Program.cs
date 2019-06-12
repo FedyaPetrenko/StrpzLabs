@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Text;
 
 namespace ApiClient
 {
@@ -8,16 +9,16 @@ namespace ApiClient
     {
         private static void Main()
         {
-            Console.WriteLine("Connect to http://localhost:50987");
-            HttpClient client = new HttpClient {BaseAddress = new Uri("http://localhost:50987/api")};
-
+            Console.WriteLine("Connect to http://localhost:5050");
+            HttpClient client = new HttpClient {BaseAddress = new Uri("http://localhost:5050/api/")};
+            //client.DefaultRequestHeaders.Add("Content-Type", "application/json");
             for (int i = 0; i < 100; i++)
             {
-                var order = new { Name = $"Order{new Random().Next(Int32.MinValue, Int32.MaxValue)}" };
+                var order = new { Number = new Random().Next(Int32.MinValue, Int32.MaxValue), StatusValue = 0, Id = 0 };
 
-                client.PostAsync("orders", new StringContent(JsonConvert.SerializeObject(order)));
+                var a = client.PostAsync("orders", new StringContent(JsonConvert.SerializeObject(order), Encoding.UTF8, "application/json")).Result;
 
-                Console.WriteLine($"Posted order with name {order.Name}");
+                Console.WriteLine($"Posted order with name {order.Number}");
             }
 
             Console.WriteLine("Processing finished.");

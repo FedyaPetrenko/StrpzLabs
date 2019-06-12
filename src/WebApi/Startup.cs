@@ -11,6 +11,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Elasticsearch;
 using WebApi.Commands;
+using WebApi.Queries;
 
 namespace WebApi
 {
@@ -21,12 +22,11 @@ namespace WebApi
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .MinimumLevel.Debug()
-                .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("kibana"))
-                {
-                    MinimumLogEventLevel = LogEventLevel.Verbose,
-                    AutoRegisterTemplate = true,
-                })
+                .WriteTo.Http("http://localhost:5000")
+                .Enrich.FromLogContext()
                 .CreateLogger();
+
+            Log.Information("Web Api service started successfully.");
 
             Configuration = configuration;
         }
@@ -46,6 +46,7 @@ namespace WebApi
             services.AddDbContextPool<ShopContext>(options => options.UseLazyLoadingProxies());
 
             services.AddTransient<ICreateOrderCommand, CreateOrderCommand>();
+            services.AddTransient<IGetOrderQuery, GetOrdersQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
