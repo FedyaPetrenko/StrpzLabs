@@ -19,15 +19,6 @@ namespace WebApi
     {
         public Startup(IConfiguration configuration)
         {
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .MinimumLevel.Debug()
-                .WriteTo.Http("http://localhost:5000")
-                .Enrich.FromLogContext()
-                .CreateLogger();
-
-            Log.Information("Web Api service started successfully.");
-
             Configuration = configuration;
         }
 
@@ -43,16 +34,26 @@ namespace WebApi
                     Configuration["DbConnection"]).Options;
             services.AddSingleton(contextOptions);
             services.AddDbContext<ShopContext>();
-            services.AddDbContextPool<ShopContext>(options => options.UseLazyLoadingProxies());
 
+            services.AddLogging(x => x.AddSerilog(new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Http("http://localhost:5000")
+                .CreateLogger(), true));
+            
             services.AddTransient<ICreateOrderCommand, CreateOrderCommand>();
             services.AddTransient<IGetOrderQuery, GetOrdersQuery>();
+
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = "localhost:6379";
+                option.InstanceName = "rediscache";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            // loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
@@ -66,6 +67,13 @@ namespace WebApi
             }
 
             // Add serilog
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Http("http://localhost:5000")
+                .CreateLogger();
+
+            Log.Information("Web Api service started successfully.");
+            
             loggerFactory.AddSerilog();
 
             app.UseStaticFiles();

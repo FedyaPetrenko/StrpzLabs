@@ -9,8 +9,8 @@ namespace ApiClient
     {
         private static void Main()
         {
-            Console.WriteLine("Connect to http://localhost:5050");
-            HttpClient client = new HttpClient {BaseAddress = new Uri("http://localhost:5050/api/")};
+            Console.WriteLine("Connect to http://localhost:5585/");
+            HttpClient client = new HttpClient {BaseAddress = new Uri("http://localhost:5585/api/") };
             //client.DefaultRequestHeaders.Add("Content-Type", "application/json");
             for (int i = 0; i < 100; i++)
             {

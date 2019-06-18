@@ -20,7 +20,7 @@ namespace KafkaListener
             var config = new Dictionary<string, object>
             {
                 { "group.id", "sample-consumer" },
-                { "bootstrap.servers", kafka },
+                { "bootstrap.servers", "172.24.0.5:46912" },
                 { "enable.auto.commit", "false"}
             };
 

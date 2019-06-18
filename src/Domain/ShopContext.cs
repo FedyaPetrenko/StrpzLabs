@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain
 {
@@ -31,23 +33,33 @@ namespace Domain
             modelBuilder.Entity<OrderProducts>()
                 .HasKey(x => new { x.OrderId, x.ProductId });
 
+            var products = new List<Product>();
+            //for (int i = 1; i < 100000; i++)
+            //{
+            //    products.Add(new Product
+            //    {
+            //        Id = i,
+            //        Name = $"Apple{i}",
+            //        Type = $"Fruit{i}"
+            //    });
+            //}
+
             modelBuilder.Entity<Product>()
-                .HasData(new Product
+                .HasData(products);
+
+            var orders = new List<Order>();
+            for (int i = 1; i < 20000; i++)
+            {
+                orders.Add(new Order
                 {
-                    Id = 1, Name = "Apple", Type = "Fruit"
-                }, new Product
-                {
-                    Id = 2, Name = "Orange", Type = "Fruit"
-                }, new Product
-                {
-                    Id = 3, Name = "Apricot", Type = "Fruit"
-                }, new Product
-                {
-                    Id = 4, Name = "Mandarin", Type = "Fruit"
-                }, new Product
-                {
-                    Id = 5, Name = "Banana", Type = "Fruit"
+                    Id = i,
+                    Number = new Random().Next(Int32.MinValue, Int32.MaxValue),
+                    StatusValue = new Random().Next(0, 1)
                 });
+            }
+
+            modelBuilder.Entity<Order>()
+                .HasData(orders);
         }
     }
 }

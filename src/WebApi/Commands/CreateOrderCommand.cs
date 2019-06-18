@@ -16,14 +16,14 @@ namespace WebApi.Commands
             var kafka = Environment.GetEnvironmentVariable("KAFKA_BOOTSTRAP-SERVERS");
             var config = new Dictionary<string, object>
             {
-                { "bootstrap.servers", "localhost:9092" }
+                { "bootstrap.servers", "10.5.0.2:55322" }
             };
 
             using (var producer = new Producer<Null, string>(config, null, new StringSerializer(Encoding.UTF8)))
             {
                 var orderData = JsonConvert.SerializeObject(order);
 
-                await producer.ProduceAsync("orders", null, "Hello topic");
+                await producer.ProduceAsync("orders", null, orderData);
                 producer.Flush(100);
             }
         }

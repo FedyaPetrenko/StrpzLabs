@@ -7,5 +7,7 @@ namespace WebApi.Queries
     public interface IGetOrderQuery
     {
         Task<List<Order>> Get();
+
+        Task<Order> GetById(int id);
     }
 }
